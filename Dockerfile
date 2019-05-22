@@ -13,7 +13,7 @@ ADD ops.txt /TekkitCServer
 ADD white-list.txt /TekkitCServer
 ADD server.properties /TekkitCServer
 WORKDIR /TekkitCServer/plugins
-RUN wget http://dev.bukkit.org/media/files/586/18/ChopTree2.jar
+RUN wget https://media.forgecdn.net/files/757/757/ChopTree2.jar
 WORKDIR /TekkitCServer
 RUN rm /TekkitCServer/Tekkit_Server_3.1.2.zip
 RUN chmod +x /TekkitCServer/launch.sh

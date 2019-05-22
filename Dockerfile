@@ -20,8 +20,10 @@ RUN chmod +x /TekkitCServer/launch.sh
 
 EXPOSE 25565
 
-RUN useradd tekkit
-RUN chown -R tekkit:tekkit /TekkitCServer
+RUN addgroup -g 1000 tekkit \
+  && adduser -Ss /bin/false -u 1000 -G tekkit -h /home/tekkit tekkit \
+  && chown -R tekkit:tekkit /TekkitCServer /home/minecraft
+  
 USER tekkit
 
 

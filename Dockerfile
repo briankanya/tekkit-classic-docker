@@ -22,8 +22,8 @@ EXPOSE 25565
 
 RUN addgroup -g 1000 tekkit \
   && adduser -Ss /bin/false -u 1000 -G tekkit -h /home/tekkit tekkit \
-  && chown -R tekkit:tekkit /TekkitCServer /home/minecraft
-  
+  && chown -R tekkit:tekkit /TekkitCServer /home/tekkit
+
 USER tekkit
 
 
